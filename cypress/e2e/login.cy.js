@@ -1,6 +1,6 @@
 import { loginPage, inventoryPage } from '../support/pages';
 
-describe('Testes de Login - Swag Labs', () => {
+describe('Testes de Login - E-commerce Swag Labs', () => {
   beforeEach(() => {
     cy.visit('/');
   });

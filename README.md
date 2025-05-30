@@ -15,6 +15,8 @@ Este projeto contém a automação de testes end-to-end para o e-commerce [Swag 
 
 - [Cypress](https://www.cypress.io/) 14+
 - Node.js 22+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ## Instalação
 
@@ -30,39 +32,38 @@ git clone git@github.com:paulosandim/teste-tecnico-onfly.git
 npm install
 ```
 
-## Executando os testes
+## Executando os testes com Docker
 
-### Abrir o Test Runner interativo:
+### Criar imagem:
+
+```bash
+docker build -t cypress-tests .
+```
+
+### Executar os testes:
+
+```bash
+docker run --rm -v $PWD:/app cypress-tests
+```
+
+### Também é possível executar os testes com docker-compose:
+
+```bash
+docker-compose up --build
+```
+
+## Executando os testes de maneira tradicional
+
+### Rodar os teste com Test Runner do Cypress:
 
 ```bash
 npx cypress open
 ```
 
-### Rodar os testes em modo headless:
+### Rodar os testes em modo headless via linha de comando:
 
 ```bash
 npx cypress run
-```
-
-## Estrutura do Projeto
-
-```
-cypress/
-├── e2e/
-│   ├── login.cy.js       # Testes de login
-│   └── compra.cy.js      # Testes de visualização e compra
-├── fixtures/             # Massa de dados (opcional)
-├── support/              # Comandos personalizados e setup
-cypress.config.js         # Configuração do Cypress
-```
-
-## Credenciais de Teste
-
-Use as seguintes credenciais para simular um login bem-sucedido:
-
-```
-Username: standard_user
-Password: secret_sauce
 ```
 
 ## Observações
