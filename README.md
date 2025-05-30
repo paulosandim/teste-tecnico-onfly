@@ -13,8 +13,8 @@ Este projeto contém a automação de testes end-to-end para o e-commerce [Swag 
 
 ## Tecnologias Utilizadas
 
-- [Cypress](https://www.cypress.io/) 14+
-- Node.js 22+
+- [Cypress 14+](https://www.cypress.io/)
+- [Node.js 22+](https://nodejs.org/en/download)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
