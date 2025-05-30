@@ -1,4 +1,4 @@
-# 🧪 Testes Automatizados com Cypress - Teste Técnico Onfly
+# 🧪 Teste Técnico Onfly - Testes Automatizados com Cypress
 
 Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/), como parte de um Teste Técnico para QA Sênior para a empresa **Onfly**, utilizando **Cypress**.
 
@@ -13,16 +13,15 @@ Este projeto contém a automação de testes end-to-end para o e-commerce [Swag 
 
 ## 🛠️ Tecnologias Utilizadas
 
-- [Cypress](https://www.cypress.io/) 12+
-- Node.js 16+
+- [Cypress](https://www.cypress.io/) 14+
+- Node.js 22+
 
 ## 📦 Instalação
 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/cypress-swag-labs.git
-cd cypress-swag-labs
+git clone git@github.com:paulosandim/teste-tecnico-onfly.git
 ```
 
 2. Instale as dependências:
@@ -70,4 +69,3 @@ Password: secret_sauce
 
 - O site Swag Labs é uma aplicação demo da empresa Sauce Labs para fins de teste.
 - Todos os testes são executados com base no ambiente público de demonstração.
-
