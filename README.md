@@ -18,23 +18,15 @@ Este projeto contém a automação de testes end-to-end para o e-commerce [Swag 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-## Instalação
+## Instalação e execução
 
-1. Clone o repositório:
+### Clone o repositório:
 
 ```bash
 git clone git@github.com:paulosandim/teste-tecnico-onfly.git
 ```
 
-2. Instale as dependências:
-
-```bash
-npm install
-```
-
-## Executando os testes com Docker
-
-### Criar imagem:
+### Criar imagem docker:
 
 ```bash
 docker build -t cypress-tests .
@@ -52,15 +44,13 @@ docker run --rm -v $PWD:/app cypress-tests
 docker-compose up --build
 ```
 
-## Executando os testes de maneira tradicional
-
 ### Rodar os teste com Test Runner do Cypress:
 
 ```bash
 npx cypress open
 ```
 
-### Rodar os testes em modo headless via linha de comando:
+### Rodar os testes em modo headless:
 
 ```bash
 npx cypress run
