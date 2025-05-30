@@ -1,22 +1,22 @@
-# 🧪 Teste Técnico Onfly - Testes Automatizados com Cypress
+# Teste Técnico Onfly - Testes Automatizados com Cypress
 
 Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/), como parte de um Teste Técnico para QA Sênior para a empresa **Onfly**, utilizando **Cypress**.
 
-## 📋 Funcionalidades Testadas
+## Funcionalidades Testadas
 
-- ✅ Login com sucesso
-- ❌ Login com falha (credenciais inválidas)
-- ⚠️ Validação de campos obrigatórios (username e password)
-- 🔍 Visualização de produto
-- 🛒 Adição e remoção de itens no carrinho
-- 💳 Fluxo completo de compra
+- Login com sucesso
+- Login com falha (credenciais inválidas)
+- Validação de campos obrigatórios (username e password)
+- Visualização de produto
+- Adição e remoção de itens no carrinho
+- Fluxo completo de compra
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - [Cypress](https://www.cypress.io/) 14+
 - Node.js 22+
 
-## 📦 Instalação
+## Instalação
 
 1. Clone o repositório:
 
@@ -30,7 +30,7 @@ git clone git@github.com:paulosandim/teste-tecnico-onfly.git
 npm install
 ```
 
-## ▶️ Executando os testes
+## Executando os testes
 
 ### Abrir o Test Runner interativo:
 
@@ -44,7 +44,7 @@ npx cypress open
 npx cypress run
 ```
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 cypress/
@@ -56,7 +56,7 @@ cypress/
 cypress.config.js         # Configuração do Cypress
 ```
 
-## 👤 Credenciais de Teste
+## Credenciais de Teste
 
 Use as seguintes credenciais para simular um login bem-sucedido:
 
@@ -65,7 +65,7 @@ Username: standard_user
 Password: secret_sauce
 ```
 
-## 📌 Observações
+## Observações
 
 - O site Swag Labs é uma aplicação demo da empresa Sauce Labs para fins de teste.
 - Todos os testes são executados com base no ambiente público de demonstração.

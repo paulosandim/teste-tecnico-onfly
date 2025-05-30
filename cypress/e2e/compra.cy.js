@@ -1,5 +1,6 @@
-describe('Fluxo de Compra - E-commerce Swag Labs', () => {
+import { products, cart, checkout } from '../support/pages';
 
+describe('Testes de Compra - E-commerce Swag Labs', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.get('[data-test="username"]').type('standard_user');
@@ -13,28 +14,30 @@ describe('Fluxo de Compra - E-commerce Swag Labs', () => {
   });
 
   it('Adicionar produto ao carrinho e acessar o carrinho', () => {
-    cy.contains('Sauce Labs Bolt T-Shirt').parent().parent().find('button').click();
-    cy.get('.shopping_cart_link').click();
-    cy.get('.cart_item').should('contain', 'Sauce Labs Bolt T-Shirt');
+    cy.get(products.addToCartButton('Sauce Labs Bolt T-Shirt')).click();
+    cy.get(cart.link).click();
+    cy.get(cart.item).should('contain', 'Sauce Labs Bolt T-Shirt');
   });
 
   it('Remover produto do carrinho', () => {
-    cy.contains('Sauce Labs Bolt T-Shirt').parent().parent().find('button').click();
-    cy.get('.shopping_cart_link').click();
-    cy.get('[data-test="remove-sauce-labs-bolt-t-shirt"]').click();
-    cy.get('.cart_item').should('not.exist');
+    cy.get(products.addToCartButton('Sauce Labs Bolt T-Shirt')).click();
+    cy.get(cart.link).click();
+    cy.get(cart.removeButton('sauce-labs-bolt-t-shirt')).click();
+    cy.get(cart.item).should('not.exist');
   });
 
-  it('Fluxo completo de compra', () => {
-    cy.contains('Sauce Labs Backpack').parent().parent().find('button').click();
-    cy.get('.shopping_cart_link').click();
-    cy.get('[data-test="checkout"]').click();
-    cy.get('[data-test="firstName"]').type('João');
-    cy.get('[data-test="lastName"]').type('Silva');
-    cy.get('[data-test="postalCode"]').type('12345');
-    cy.get('[data-test="continue"]').click();
-    cy.get('[data-test="finish"]').click();
+  it('Executar fluxo completo de compra', () => {
+    cy.get(products.addToCartButton('Sauce Labs Backpack')).click();
+    cy.get(cart.link).click();
+
+    cy.get(cart.checkoutButton).click();
+    cy.get(checkout.firstName).type('João');
+    cy.get(checkout.lastName).type('Silva');
+    cy.get(checkout.postalCode).type('12345');
+    cy.get(checkout.continueButton).click();
+    cy.get(checkout.finishButton).click();
+
     cy.contains('Thank you for your order!').should('be.visible');
+    cy.get(checkout.goHome).click()
   });
-
 });
