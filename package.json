@@ -1,4 +1,13 @@
 {
+  "name": "onfly-e2e-tests",
+  "version": "1.0.0",
+  "description": "Testes end-to-end automatizados com Cypress para o e-commerce Swag Labs, desenvolvidos pela equipe da Onfly.",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open",
+    "test:docker": "docker run --rm -v $PWD:/app cypress-tests",
+    "test:docker:compose": "docker-compose up --build"
+  },
   "devDependencies": {
     "cypress": "^14.4.0"
   }
