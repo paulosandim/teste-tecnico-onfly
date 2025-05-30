@@ -1,6 +1,6 @@
-# 🧪 Testes Automatizados com Cypress - E-commerce Swag Labs
+# 🧪 Testes Automatizados com Cypress - Teste Técnico Onfly
 
-Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/) utilizando **Cypress**.
+Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/), como parte de um Teste Técnico para QA Sênior para a empresa **Onfly**, utilizando **Cypress**.
 
 ## 📋 Funcionalidades Testadas
 
@@ -70,3 +70,4 @@ Password: secret_sauce
 
 - O site Swag Labs é uma aplicação demo da empresa Sauce Labs para fins de teste.
 - Todos os testes são executados com base no ambiente público de demonstração.
+
