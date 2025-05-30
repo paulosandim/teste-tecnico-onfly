@@ -38,13 +38,13 @@ docker build -t cypress-tests .
 docker run --rm -v $PWD:/app cypress-tests
 ```
 
-### Também é possível executar os testes com docker-compose:
+### Executar os testes com docker-compose:
 
 ```bash
 docker-compose up --build
 ```
 
-### Rodar os teste com Test Runner do Cypress:
+### Rodar os testes com Test Runner do Cypress:
 
 ```bash
 npx cypress open
