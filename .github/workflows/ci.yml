@@ -24,7 +24,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install docker-compose -y
 
-      - name: Rodar Docker Compose com Cypress e Newman
+      - name: Rodar Testes Cypress e Newman no Docker Compose
         run: docker-compose up --build --abort-on-container-exit
 
       - name: Encerrar containers
