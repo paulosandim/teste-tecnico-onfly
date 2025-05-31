@@ -30,6 +30,10 @@ jobs:
       - name: Encerrar containers
         run: docker-compose down
 
+      - name: Verificar vídeos gerados
+        if: always()
+        run: ls -R cypress/videos || echo "Nenhum vídeo gerado"
+
       - name: Salvar screenshots dos testes no Cypress (em caso de falha)
         if: always()
         uses: actions/upload-artifact@v4
