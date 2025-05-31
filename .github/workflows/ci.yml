@@ -27,12 +27,19 @@ jobs:
       - name: Rodar Docker Compose com Cypress e Newman
         run: docker-compose up --build --abort-on-container-exit
 
-      - name: 🧹 Encerrar containers
+      - name: Encerrar containers
         run: docker-compose down
 
-      - name: Salvar screenshots do Cypress (em caso de falha)
+      - name: Salvar screenshots dos testes no Cypress (em caso de falha)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots/
+
+      - name: Salvar vídeos dos testes no Cypress
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos/
