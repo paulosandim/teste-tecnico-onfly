@@ -5,9 +5,9 @@
   "scripts": {
     "test": "cypress run",
     "cypress:open": "cypress open",
-    "test:docker": "docker run --rm -v $PWD:/app cypress-tests",
-    "test:docker:compose": "docker-compose up --build",
-    "test:api": "docker run --rm -v $(pwd)/postman:/etc/newman postman/newman run colecao-exemplo.postman_collection.json --environment ambiente-local.postman_environment.json"
+    "test:docker": "docker run --rm -v ${PWD}:/app cypress-tests",
+    "test:docker:compose": "docker-compose up --build --abort-on-container-exit",
+    "test:api": "docker run --rm -v ${PWD}/postman:/etc/newman postman/newman run colecao-exemplo.postman_collection.json --environment ambiente-local.postman_environment.json"
   },
   "devDependencies": {
     "cypress": "^14.4.0"

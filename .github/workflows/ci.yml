@@ -1,0 +1,38 @@
+name: E2E + API Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Setup do Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
+
+      - name: Rodar Docker Compose com Cypress e Newman
+        run: docker-compose up --build --abort-on-container-exit
+
+      - name: 🧹 Encerrar containers
+        run: docker-compose down
+
+      - name: Salvar screenshots do Cypress (em caso de falha)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots/

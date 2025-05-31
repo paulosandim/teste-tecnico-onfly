@@ -1,7 +1,10 @@
 # Teste Técnico Onfly - Testes Automatizados
 
-Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/) e, também, testes de API , ambos como parte de um Teste Técnico para QA Sênior para a empresa **Onfly**, utilizando **Cypress**.
+Este projeto contém a automação de testes end-to-end para o e-commerce público [Swag Labs](https://www.saucedemo.com/).
 
+Também foram criados testes para a API pública [Go REST](https://gorest.co.in/).
+
+Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly**.
 
 ## Funcionalidades Testadas na Web
 
@@ -59,20 +62,3 @@ docker run --rm -v $PWD:/app cypress-tests
 ```bash
 docker-compose up --build
 ```
-
-### Executar os testes com Test Runner do Cypress:
-
-```bash
-npx cypress open
-```
-
-### Executar os testes em modo headless:
-
-```bash
-npx cypress run
-```
-
-## Observações
-
-- O site Swag Labs é uma aplicação demo da empresa Sauce Labs para fins de teste.
-- Todos os testes são executados com base no ambiente público de demonstração.

@@ -1,8 +1,8 @@
-FROM cypress/included:14.4.0
+FROM cypress/included:13.6.6
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
+COPY package*.json ./
 
 RUN npm install
 
