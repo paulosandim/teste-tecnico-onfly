@@ -32,7 +32,7 @@ jobs:
 
       - name: Salvar screenshots do Cypress (em caso de falha)
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
           path: cypress/screenshots/
