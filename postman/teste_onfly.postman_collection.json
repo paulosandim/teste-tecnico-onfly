@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "5ab84735-4fa6-4deb-9f23-f29d5090b2f4",
+		"name": "Teste Técnico Onfly",
+		"description": "Teste de API utilizando o Postman com a API pública Go REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12428293"
+	},
+	"item": [
+		{
+			"name": "Criar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Pedro da Silva\",\r\n  \"email\": \"pedro.silva@example.com\",\r\n  \"gender\": \"female\",\r\n  \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Todos Usuário",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Usuário Especifíco",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseUrl}}/users/7923359"
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Usuário",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Maria Silva Tadeu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/users/7923359"
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://gorest.co.in/public/v2/users/7923331"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "4fde4771eae161612f998ca7549dc81a85faf8d59499743e48a9b7de6cdae970"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://gorest.co.in/public/v2",
+			"type": "string"
+		}
+	]
+}

@@ -1,9 +1,18 @@
-version: "3.8"
-
 services:
+  newman:
+    image: postman/newman
+    volumes:
+      - ./postman:/etc/newman
+    command: >
+      run teste_onfly.postman_collection.json
+      --environment ambiente.postman_environment.json
+
   cypress:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     container_name: cypress-tests
     volumes:
       - .:/app
     working_dir: /app
+    command: npx cypress run

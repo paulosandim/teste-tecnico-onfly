@@ -1,15 +1,29 @@
-# Teste Técnico Onfly - Testes Automatizados com Cypress
+# Teste Técnico Onfly - Testes Automatizados
 
-Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/), como parte de um Teste Técnico para QA Sênior para a empresa **Onfly**, utilizando **Cypress**.
+Este projeto contém a automação de testes end-to-end para o e-commerce [Swag Labs](https://www.saucedemo.com/) e, também, testes de API , ambos como parte de um Teste Técnico para QA Sênior para a empresa **Onfly**, utilizando **Cypress**.
 
-## Funcionalidades Testadas
+
+## Funcionalidades Testadas na Web
 
 - Login com sucesso
 - Login com falha (credenciais inválidas)
 - Validação de campos obrigatórios (username e password)
 - Visualização de produto
-- Adição e remoção de itens no carrinho
+- Adição de itens no carrinho
+- Remoção de itens no carrinho
 - Fluxo completo de compra
+
+## Funcionalidades Testadas na API
+
+- Criação de usuários
+- Busca por todos os usuários
+- Busca por um usuário especifíco
+- Edição de um usuário especifíco
+- Exclusão de usuário especifíco
+
+## Casos de Testes 
+
+- Os Casos de Testes estão na pasta [features](./features), no formarto Gherkin e prontos para serem usados com Cucumber.
 
 ## Tecnologias Utilizadas
 
@@ -17,6 +31,8 @@ Este projeto contém a automação de testes end-to-end para o e-commerce [Swag 
 - [Node.js 22+](https://nodejs.org/en/download)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
+- [Postman](https://www.postman.com/)
+- [Newman CLI](https://github.com/postmanlabs/newman)
 
 ## Instalação e execução
 
