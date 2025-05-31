@@ -2,7 +2,7 @@
 
 Este projeto contém a automação de testes end-to-end para o e-commerce público [Swag Labs](https://www.saucedemo.com/).
 
-Também foram criados testes para a API pública [Go REST](https://gorest.co.in/).
+Também foram criados testes automatizados para validar a API pública [Go REST](https://gorest.co.in/).
 
 Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly**.
 
@@ -37,18 +37,12 @@ Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly
 - [Postman](https://www.postman.com/)
 - [Newman CLI](https://github.com/postmanlabs/newman)
 
-## Evidências das execuções dos testes
-
-### Testes do Fluxo de Login:
-![evidencias fluxo login](./evidencias/teste-login.gif)
-
-### Testes do Fluxo de Compra:
-![evidencias fluxo compra](./evidencias/teste-compra.gif)
-
-### Testes Cypress via Headless:
-![evidencias headless](./evidencias/teste-headless.gif)
-
 ## Instalação e execução
+
+### Requisitos
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ### Clone o repositório:
 
@@ -56,14 +50,9 @@ Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly
 git clone git@github.com:paulosandim/teste-tecnico-onfly.git
 ```
 
-## Requisitos
-
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-
 ## Build e execução completa
 
-### Executar ambos os conjuntos de testes (Newman e Cypress):
+### Executar bateria completa de E2E + API (Cypress e Newman):
 
 ```bash
 docker-compose up --build
@@ -82,4 +71,20 @@ docker-compose run --rm newman
 ## Integração Contínua com GitHub Actions
 
 Este projeto está integrado ao **GitHub Actions** para rodar testes automaticamente a cada _push_ ou _pull request_.
+
+## Evidências dos Testes
+
+### Bateria de Testes Completa E2E + API (Cypress e Newman):
+
+### Testes do Fluxo de Login:
+![evidencias fluxo login](./evidencias/teste-login.gif)
+
+### Testes do Fluxo de Compra:
+![evidencias fluxo compra](./evidencias/teste-compra.gif)
+
+### Testes Cypress via Headless:
+![evidencias headless](./evidencias/teste-headless.gif)
+
+### Testes de API via Postman:
+![evidencias postman](./evidencias/teste-postman.gif)
 
