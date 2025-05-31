@@ -37,6 +37,17 @@ Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly
 - [Postman](https://www.postman.com/)
 - [Newman CLI](https://github.com/postmanlabs/newman)
 
+## Evidências das execuções dos testes
+
+### Testes do Fluxo de Login:
+![evidencias fluxo login](./evidencias/teste-login.gif)
+
+### Testes do Fluxo de Compra:
+![evidencias fluxo compra](./evidencias/teste-compra.gif)
+
+### Testes Cypress via Headless:
+![evidencias headless](./evidencias/teste-headless.gif)
+
 ## Instalação e execução
 
 ### Clone o repositório:
@@ -45,20 +56,30 @@ Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly
 git clone git@github.com:paulosandim/teste-tecnico-onfly.git
 ```
 
-### Criar imagem docker:
+## Requisitos
 
-```bash
-docker build -t cypress-tests .
-```
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
-### Executar os testes:
+## Build e execução completa
 
-```bash
-docker run --rm -v $PWD:/app cypress-tests
-```
-
-### Executar os testes com docker-compose:
+### Executar ambos os conjuntos de testes (Newman e Cypress):
 
 ```bash
 docker-compose up --build
 ```
+
+### Executar apenas Cypress:
+```bash
+docker-compose run --build cypress
+```
+
+### Executar apenas Newman:
+```bash
+docker-compose run --rm newman
+```
+
+## Integração Contínua com GitHub Actions
+
+Este projeto está integrado ao **GitHub Actions** para rodar testes automaticamente a cada _push_ ou _pull request_.
+
