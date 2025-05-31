@@ -20,13 +20,13 @@ Ambos como parte de um Teste Técnico para vaga de QA Sênior na empresa **Onfly
 
 - Criação de usuários
 - Busca por todos os usuários
-- Busca por um usuário especifíco
-- Edição de um usuário especifíco
-- Exclusão de usuário especifíco
+- Busca por um usuário específico
+- Edição de um usuário específico
+- Exclusão de usuário específico
 
 ## Casos de Testes 
 
-- Os Casos de Testes estão na pasta [features](./features), no formarto Gherkin e prontos para serem usados com Cucumber.
+- Os Casos de teste estão na pasta [features](./features), no formato Gherkin e prontos para serem usados com Cucumber.
 
 ## Tecnologias Utilizadas
 
@@ -74,7 +74,7 @@ Este projeto está integrado ao **GitHub Actions** para rodar testes automaticam
 
 ## Evidências dos Testes
 
-### Bateria de Testes Completa E2E + API (Cypress e Newman):
+### Execução Completa E2E + API (Cypress e Newman):
 
 ### Testes do Fluxo de Login:
 ![evidencias fluxo login](./evidencias/teste-login.gif)

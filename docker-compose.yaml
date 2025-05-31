@@ -11,6 +11,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    dns:
+     - 8.8.8.8
     container_name: cypress-tests
     volumes:
       - .:/app
