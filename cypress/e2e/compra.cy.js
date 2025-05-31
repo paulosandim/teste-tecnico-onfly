@@ -3,9 +3,7 @@ import { products, cart, checkout } from '../support/pages';
 describe('Testes de Compra - E-commerce Swag Labs', () => {
   beforeEach(() => {
     cy.visit('/');
-    cy.get('[data-test="username"]').type('standard_user');
-    cy.get('[data-test="password"]').type('secret_sauce');
-    cy.get('[data-test="login-button"]').click();
+    cy.login()
   });
 
   it('Visualizar um produto', () => {
