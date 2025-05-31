@@ -44,13 +44,13 @@ docker run --rm -v $PWD:/app cypress-tests
 docker-compose up --build
 ```
 
-### Rodar os testes com Test Runner do Cypress:
+### Executar os testes com Test Runner do Cypress:
 
 ```bash
 npx cypress open
 ```
 
-### Rodar os testes em modo headless:
+### Executar os testes em modo headless:
 
 ```bash
 npx cypress run

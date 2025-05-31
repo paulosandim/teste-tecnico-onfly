@@ -38,4 +38,8 @@ describe('Testes de Compra - E-commerce Swag Labs', () => {
     cy.contains('Thank you for your order!').should('be.visible');
     cy.get(checkout.goHome).click()
   });
+  
+  afterEach(function () {
+    cy.screenshot(this.currentTest.title);
+  });
 });

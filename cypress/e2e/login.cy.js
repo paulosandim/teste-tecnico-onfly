@@ -9,7 +9,6 @@ describe('Testes de Login - E-commerce Swag Labs', () => {
     cy.login()
     cy.url().should('include', '/inventory.html');
     cy.get(inventoryPage.title).should('contain', 'Products');
-    cy.screenshot('login-com-sucesso')
   });
 
   it('Validar login com credenciais inválidas', () => {
@@ -17,20 +16,21 @@ describe('Testes de Login - E-commerce Swag Labs', () => {
     cy.get(loginPage.passwordInput).type('senha_errada');
     cy.get(loginPage.loginButton).click();
     cy.get(loginPage.errorMessage).should('contain', 'Username and password do not match');
-    cy.screenshot('tentativa-login')
   });
 
   it('Validar login com campo username vazio', () => {
     cy.get(loginPage.passwordInput).type('secret_sauce');
     cy.get(loginPage.loginButton).click();
     cy.get(loginPage.errorMessage).should('contain', 'Username is required');
-    cy.screenshot('username-vazio')
   });
 
   it('Validar login com campo password vazio', () => {
     cy.get(loginPage.usernameInput).type('standard_user');
     cy.get(loginPage.loginButton).click();
     cy.get(loginPage.errorMessage).should('contain', 'Password is required');
-    cy.screenshot('password-vazio')
+  });
+
+  afterEach(function () {
+    cy.screenshot(this.currentTest.title);
   });
 });
