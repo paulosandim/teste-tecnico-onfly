@@ -6,9 +6,7 @@ describe('Testes de Login - E-commerce Swag Labs', () => {
   });
 
   it('Validar login com sucesso', () => {
-    cy.get(loginPage.usernameInput).type('standard_user');
-    cy.get(loginPage.passwordInput).type('secret_sauce');
-    cy.get(loginPage.loginButton).click();
+    cy.login()
     cy.url().should('include', '/inventory.html');
     cy.get(inventoryPage.title).should('contain', 'Products');
     cy.screenshot('login-com-sucesso')
