@@ -75,6 +75,7 @@ Este projeto está integrado ao **GitHub Actions** para rodar testes automaticam
 ## Evidências dos Testes
 
 ### Execução Completa E2E + API (Cypress e Newman):
+![evidencias execucao completa](./evidencias/teste-docker.gif)
 
 ### Testes do Fluxo de Login:
 ![evidencias fluxo login](./evidencias/teste-login.gif)
