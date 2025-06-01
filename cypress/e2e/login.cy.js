@@ -29,4 +29,7 @@ describe('Testes de Login - E-commerce Swag Labs', () => {
     cy.get(loginPage.loginButton).click()
     cy.get(loginPage.errorMessage).should('contain', 'Password is required')
   })
+   afterEach(function () {
+    cy.screenshot(this.currentTest.title)
+  })
 })
